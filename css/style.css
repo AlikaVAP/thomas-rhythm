@@ -2,6 +2,9 @@
 * {
 	box-sizing: border-box;
 }
+*:focus {
+	outline: none;
+}
 body {
 	margin: 0;
 	background-color: #fff;
@@ -30,16 +33,24 @@ ul, ol {
 img {
 	max-width: 100%;
 }
-button {
+input, textarea, button {
 	outline: none;
 	border: none;
+}
+button {
+	cursor: pointer;
+}
+textarea {
+	resize: vertical;
+}
+input[type="submit"] {
 	cursor: pointer;
 }
 blockquote {
 	margin: 0;
 }
 /* ===== Reset end ===== */
-/* ===== Default classes start */
+/* ===== Default classes start ===== */
 .text-center {
 	text-align: center;
 }
@@ -55,7 +66,7 @@ blockquote {
 .bg-grey {
 	background-color: #f8f8f8;
 }
-/* ===== Default classes end */
+/* ===== Default classes end ===== */
 /* ===== Default component start ===== */
 .default-section {
 	padding: 135px 0;
@@ -75,7 +86,7 @@ blockquote {
 	padding: 0 15px;
 	width: 100%;
 }
-
+/* ----- Title ----- */
 .title {
 	font-family: 'Dosis', sans-serif;
 	text-transform: uppercase;
@@ -103,6 +114,8 @@ blockquote {
 	margin-top: 35px;
 	margin-bottom: 35px;
 }
+/* ----- Title end----- */
+/* ----- Default text ----- */
 .default-text {
 	font-size: 15px;
 	font-weight: 300;
@@ -122,7 +135,8 @@ blockquote span,
 	text-transform: uppercase;
 	letter-spacing: .2em;
 }
-
+/* ----- Default text end ----- */
+/* ----- Buttons ----- */
 .btn {
 	display: inline-block;
 	font-family: 'Open Sans';
@@ -133,7 +147,10 @@ blockquote span,
 	padding: 12px 20px;
 	border-radius: 2px;
 }
-
+.btn[disabled] {
+	cursor: not-allowed;
+	opacity: .6;
+}
 .btn.btn-default {
 	background-color: #e5e5e5;
 	color: #777;
@@ -156,7 +173,59 @@ blockquote span,
 	padding: 7px 15px;
 	font-size: 11px;
 }
-
+/* ----- Buttons end ----- */
+/* ----- Icons ----- */
+.icon {
+	font-size: 48px;
+}
+/* ----- Icons end----- */
+/* ----- Tabs ----- */
+.tabs-title {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: .4em;
+	text-transform: uppercase;
+}
+/* ----- Tabs end ----- */
+/* ----- Form ----- */
+.form-control {
+	width: 100%;
+	height: 36px;
+	font-family: 'Open Sans';
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+	color: #777;
+	padding-left: 13px;
+	padding-right: 13px;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+}
+.form-control:focus {
+	border-color: #111;
+}
+textarea.form-control {
+	min-height: 82px;
+	padding-top: 10px;
+}
+.form-control[disabled] {
+	cursor: not-allowed;
+	opacity: .6;
+}
+.form-control.error {
+	border-color: #f57e7e;
+}
+.form-info {
+	font-size: 11px;
+	font-weight: 400;
+	color: #aaa;
+}
+.form-info .fa {
+	font-size: 12px;
+}
+/* ----- Form end ----- */
 .header {
 	position: fixed;
 	top: 0;
@@ -185,8 +254,15 @@ blockquote span,
 	margin-left: 35px;
 }
 /* ===== Default component end ===== */
+
+/* ==== Guide styles start ===== */
+.guide-section form .form-control {
+	margin-bottom: 10px;
+}
+/* ==== Guide styles end ===== */
+
 /* ==== Custom styles start ===== */
-/* ------- Inner ------- */
+/* ----- Inner ----- */
 .inner {
 	background: url('../img/inner-bg.jpg') no-repeat center / cover;
 	height: 100vh;
@@ -218,9 +294,9 @@ blockquote span,
 	font-size: 19px;
 	color: rgba(254, 254, 254, .68);
 }
-/* ------- Inner end ------- */
+/* ----- Inner end ----- */
 
-/* ------- About studio ------- */
+/* ----- About studio ----- */
 .about-studio {
 	border-bottom: 1px solid #ececec;
 }
@@ -259,14 +335,138 @@ margin-top: 100px;
 .team-item-info .team-item-role {
 	font-size: 12px;
 }
-/* ------- About studio end ------- */
+/* ----- About studio end ----- */
 
-/* ------- Why choose us ------- */
-.icon {
-	font-size: 48px;
+/* ----- Services ----- */
+#tabs .tabs-nav-services {
+	overflow: hidden;
+	margin-bottom: 80px;
 }
+#tabs .tabs-nav-services li {
+	float: left;
+	width: 20%;
+	text-align: center;
+	color: rgba(17, 17, 17, .50);
+}
+#tabs .tabs-nav-services li.ui-state-active {
+	color: #111;
+}
+#tabs .tabs-nav-services li span {
+	display: block;
+}
+#tabs .tabs.tabs-title-services {
+	margin-top: 35px;
+}
+/* ----- Services end ----- */
 
-/* ------- Why choose us end ------- */
+/* ----- Lets talk ----- */
+.lets-talk-content {
+	padding: 140px 0;
+}
+.lets-talk-content p {
+	color: rgba(255, 255, 255, .7);
+	margin-bottom: 35px;
+}
+.lets-talk .lets-talk-img {
+	margin-top: -32px;
+}
+/* ----- Lets talk end ----- */
+
+/* ----- Portfolio ----- */
+.portfolio {
+	padding-top: 135px;
+}
+.portfolio .portfolio-text {
+	max-width: 770px;
+	margin: auto;
+}
+#tabs-portfolio {
+	text-align: center;
+	overflow: hidden;
+}
+#tabs-portfolio .tabs-nav-portfolio {
+	display: inline-block;
+	margin-top: 80px;
+	margin-bottom: 50px;
+}
+#tabs-portfolio .tabs-nav-portfolio li {
+	float: left;
+	color: rgba(17, 17, 17, .50);
+}
+#tabs-portfolio .tabs-nav-portfolio li + li {
+	margin-left: 65px;
+}
+#tabs-portfolio .tabs-nav-portfolio li.ui-state-active {
+	color: #111;
+}
+#tabs-portfolio .portfolio-item {
+	float: left;
+	width: 33.3333%;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-bottom: 7px;
+}
+#tabs-portfolio .portfolio-item img {
+	width: 100%;
+	filter: grayscale(100%);
+}
+#tabs-portfolio .portfolio-item img:hover {
+	filter: none;
+}
+/* ----- Portfolio end ----- */
+
+/* ----- Why choose us ----- */
+.why-choose-us {
+	border-bottom: 1px solid #ececec;  /* temporary */
+}
+.why-choose-us .row + .row {
+	margin-top: 100px;
+}
+/* ----- Why choose us end ----- */
+
+/* ----- Latest news ----- */
+.latest-news .title .link-title {
+	float: right;
+	font-size: 11px;
+	letter-spacing: .4em;
+	color: #999;
+	line-height: 18px;
+}
+.latest-news-item .latest-news-img {
+	width: 100%;
+	filter: grayscale(100%)
+}
+.latest-news-item .latest-news-img:hover {
+	filter: none;
+}
+.latest-news-item .title-news-item, .latest-news-item .news-author {
+	font-family: 'Dosis';
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.latest-news-item .title-news-item {
+	font-size: 15px;
+	letter-spacing: .2em;
+	margin-top: 30px;
+	margin-bottom: 17px;
+}
+.latest-news-item .news-author {
+	font-size: 11px;
+	letter-spacing: .4em;
+}
+.latest-news-item p {
+	margin: 23px 0;
+}
+/* ----- Latest news end ----- */
+
+/* ----- Subscribe ----- */
+.subscribe form .form-control {
+	max-width: 290px;
+}
+.subscribe .form-info {
+	margin-top: 17px;
+}
+/* ----- Subscribe end ----- */
 
 /* ==== Custom styles end ===== */
 
