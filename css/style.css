@@ -111,8 +111,6 @@ blockquote {
 	font-size: 14px;
 	font-weight: 400;
 	letter-spacing: .4em;
-	margin-top: 35px;
-	margin-bottom: 35px;
 }
 /* ----- Title end----- */
 /* ----- Default text ----- */
@@ -380,17 +378,18 @@ margin-top: 100px;
 	max-width: 770px;
 	margin: auto;
 }
-#tabs-portfolio {
-	text-align: center;
+.portfolio .tabs-wrapper {
 	overflow: hidden;
+	margin-top: 80px;
+}
+.tabs-wrapper #tabs-portfolio {
+	margin: 0 -4px;	
 }
 #tabs-portfolio .tabs-nav-portfolio {
-	display: inline-block;
-	margin-top: 80px;
 	margin-bottom: 50px;
 }
 #tabs-portfolio .tabs-nav-portfolio li {
-	float: left;
+	display: inline-block;
 	color: rgba(17, 17, 17, .50);
 }
 #tabs-portfolio .tabs-nav-portfolio li + li {
@@ -409,6 +408,7 @@ margin-top: 100px;
 #tabs-portfolio .portfolio-item img {
 	width: 100%;
 	filter: grayscale(100%);
+	transition: all .3s linear;
 }
 #tabs-portfolio .portfolio-item img:hover {
 	filter: none;
@@ -416,11 +416,12 @@ margin-top: 100px;
 /* ----- Portfolio end ----- */
 
 /* ----- Why choose us ----- */
-.why-choose-us {
-	border-bottom: 1px solid #ececec;  /* temporary */
-}
 .why-choose-us .row + .row {
 	margin-top: 100px;
+}
+.why-choose-us .title-wrapper {
+	margin-top: 35px;
+	margin-bottom: 35px;
 }
 /* ----- Why choose us end ----- */
 
@@ -434,7 +435,8 @@ margin-top: 100px;
 }
 .latest-news-item .latest-news-img {
 	width: 100%;
-	filter: grayscale(100%)
+	filter: grayscale(100%);
+	transition: all .3s linear;
 }
 .latest-news-item .latest-news-img:hover {
 	filter: none;
