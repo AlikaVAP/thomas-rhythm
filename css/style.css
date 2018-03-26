@@ -39,6 +39,7 @@ input, textarea, button {
 }
 button {
 	cursor: pointer;
+	padding: 0;
 }
 textarea {
 	resize: vertical;
@@ -66,6 +67,11 @@ blockquote {
 .bg-grey {
 	background-color: #f8f8f8;
 }
+.m-auto {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
 /* ===== Default classes end ===== */
 /* ===== Default component start ===== */
 .default-section {
@@ -86,7 +92,7 @@ blockquote {
 	padding: 0 15px;
 	width: 100%;
 }
-/* ----- Title ----- */
+/* --- Title --- */
 .title {
 	font-family: 'Dosis', sans-serif;
 	text-transform: uppercase;
@@ -112,8 +118,8 @@ blockquote {
 	font-weight: 400;
 	letter-spacing: .4em;
 }
-/* ----- Title end----- */
-/* ----- Default text ----- */
+/* --- Title end--- */
+/* --- Default text --- */
 .default-text {
 	font-size: 15px;
 	font-weight: 300;
@@ -133,8 +139,8 @@ blockquote span,
 	text-transform: uppercase;
 	letter-spacing: .2em;
 }
-/* ----- Default text end ----- */
-/* ----- Buttons ----- */
+/* --- Default text end --- */
+/* --- Buttons --- */
 .btn {
 	display: inline-block;
 	font-family: 'Open Sans';
@@ -144,6 +150,7 @@ blockquote span,
 	letter-spacing: .2em;
 	padding: 12px 20px;
 	border-radius: 2px;
+	line-height: 1;
 }
 .btn[disabled] {
 	cursor: not-allowed;
@@ -171,13 +178,13 @@ blockquote span,
 	padding: 7px 15px;
 	font-size: 11px;
 }
-/* ----- Buttons end ----- */
-/* ----- Icons ----- */
+/* --- Buttons end --- */
+/* --- Icons --- */
 .icon {
 	font-size: 48px;
 }
-/* ----- Icons end----- */
-/* ----- Tabs ----- */
+/* --- Icons end--- */
+/* --- Tabs --- */
 .tabs-title {
 	font-family: 'Dosis', sans-serif;
 	font-weight: 400;
@@ -185,8 +192,8 @@ blockquote span,
 	letter-spacing: .4em;
 	text-transform: uppercase;
 }
-/* ----- Tabs end ----- */
-/* ----- Form ----- */
+/* --- Tabs end --- */
+/* --- Form --- */
 .form-control {
 	width: 100%;
 	height: 36px;
@@ -223,7 +230,32 @@ textarea.form-control {
 .form-info .fa {
 	font-size: 12px;
 }
-/* ----- Form end ----- */
+/* --- Form end --- */
+/* --- Rhomb icon start --- */
+.rhomb-icon	{
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	text-align: center;
+	line-height: 23px;
+	border-radius: 2px;
+	font-size: 14px;
+	transform: rotate(45deg);
+}
+.rhomb-icon i {
+	transform: rotate(-45deg);
+}
+.rhomb-icon.black-icon {
+	color: #fff;
+	background-color: #111;
+}
+.rhomb-icon.transparent-icon {
+	color: #111;
+	background-color: transparent;
+	border: 2px solid #111;
+}
+/* --- Rhomb icon end --- */
+/* --- Header start --- */
 .header {
 	position: fixed;
 	top: 0;
@@ -251,16 +283,52 @@ textarea.form-control {
 .header .header-nav li + li {
 	margin-left: 35px;
 }
+/* --- Header end --- */
+
+/* --- Footer start --- */
+.footer {
+	padding: 140px 0 55px 0;
+}
+.footer-socnet-icon {
+	margin-top: 24px;
+}
+.footer-socnet-icon li {
+	line-height: 17px;
+}
+.footer-socnet-icon li + li {
+	margin-left: 13px;
+}
+.footer .copyright {
+	margin-top: 109px;
+}
+.copyright span {
+	display: block;
+}
+.copyright .rhythm {
+	font-family: 'Dosis';
+	font-weight: 400;
+	font-size: 12px;
+	color: #111;
+	letter-spacing: 0.5em;
+	text-transform: uppercase;
+}
+.copyright .copyright-text {
+	font-size: 11px;
+	font-weight: 400;
+	margin-top: 15px;
+}
+/* --- Footer end --- */
+
 /* ===== Default component end ===== */
 
-/* ==== Guide styles start ===== */
+/* ===== Guide styles start ===== */
 .guide-section form .form-control {
 	margin-bottom: 10px;
 }
-/* ==== Guide styles end ===== */
+/* ===== Guide styles end ===== */
 
-/* ==== Custom styles start ===== */
-/* ----- Inner ----- */
+/* ===== Custom styles start ===== */
+/* --- Inner start --- */
 .inner {
 	background: url('../img/inner-bg.jpg') no-repeat center / cover;
 	height: 100vh;
@@ -292,9 +360,9 @@ textarea.form-control {
 	font-size: 19px;
 	color: rgba(254, 254, 254, .68);
 }
-/* ----- Inner end ----- */
+/* --- Inner end --- */
 
-/* ----- About studio ----- */
+/* --- About studio start --- */
 .about-studio {
 	border-bottom: 1px solid #ececec;
 }
@@ -333,9 +401,9 @@ margin-top: 100px;
 .team-item-info .team-item-role {
 	font-size: 12px;
 }
-/* ----- About studio end ----- */
+/* --- About studio end --- */
 
-/* ----- Services ----- */
+/* --- Services start --- */
 #tabs .tabs-nav-services {
 	overflow: hidden;
 	margin-bottom: 80px;
@@ -355,9 +423,9 @@ margin-top: 100px;
 #tabs .tabs.tabs-title-services {
 	margin-top: 35px;
 }
-/* ----- Services end ----- */
+/* --- Services end --- */
 
-/* ----- Lets talk ----- */
+/* --- Lets talk start --- */
 .lets-talk-content {
 	padding: 140px 0;
 }
@@ -368,9 +436,9 @@ margin-top: 100px;
 .lets-talk .lets-talk-img {
 	margin-top: -32px;
 }
-/* ----- Lets talk end ----- */
+/* --- Lets talk end --- */
 
-/* ----- Portfolio ----- */
+/* --- Portfolio start --- */
 .portfolio {
 	padding-top: 135px;
 }
@@ -413,9 +481,9 @@ margin-top: 100px;
 #tabs-portfolio .portfolio-item img:hover {
 	filter: none;
 }
-/* ----- Portfolio end ----- */
+/* --- Portfolio end --- */
 
-/* ----- Why choose us ----- */
+/* --- Why choose us start --- */
 .why-choose-us .row + .row {
 	margin-top: 100px;
 }
@@ -423,9 +491,109 @@ margin-top: 100px;
 	margin-top: 35px;
 	margin-bottom: 35px;
 }
-/* ----- Why choose us end ----- */
+/* --- Why choose us end --- */
 
-/* ----- Latest news ----- */
+/* --- Reviews carousel start --- */
+.reviews-carousel {
+	padding: 135px 0;
+	overflow: hidden;
+}
+.slide-content {
+	max-width: 730px;
+	margin: auto;
+}
+.slide-content .icon {
+	font-size: 32px;
+}
+.slide-content .title.section-title-light {
+	margin-top: 23px;
+	margin-bottom: 40px;
+}
+.slide-content p {
+	font-size: 18px;
+	line-height: 1.6666;
+	color: rgba(255, 255, 255, .75);
+	margin-bottom: 20px;
+}
+.slide-content .review-author {
+	font-size: 11px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	color: rgba(255, 255, 255, .3);
+}
+.slick-dots {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 30px;
+}
+.slick-dots li {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	background-color: rgba(255, 255, 255, .8);
+	border: 1px solid #000;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.slick-dots li button {
+	display: none;
+}
+.slick-dots li + li {
+	margin-left: 5px;
+}
+.slick-dots li.slick-active {
+	background-color: #000;
+	border-color: rgba(255, 255, 255, .8);
+}
+.slick-arrow {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	width: 90px;
+	z-index: 1;
+	cursor: pointer;
+}
+.slick-arrow.slick-prev {
+	left: 0;
+}
+.slick-arrow.slick-next {
+	right: 0;
+}
+.slick-arrow .carousel-button {
+	width: 63px;
+	height: 63px;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	margin-top: -31px;
+	transform: rotate(-45deg);
+}
+.slick-arrow.slick-prev .carousel-button {
+	left: 0;
+	margin-left: -32px;
+}
+.slick-arrow.slick-next .carousel-button {
+	right: 0;
+	margin-right: -31px;
+}
+.slick-arrow .carousel-button .fa {
+	position: absolute;
+	font-size: 10px;
+	transform: rotate(45deg);
+}
+.slick-arrow.slick-prev .carousel-button .fa {
+	bottom: 14px;
+	right: 17px;
+}
+.slick-arrow.slick-next .carousel-button .fa {
+	top: 17px;
+	left: 14px;
+}
+/* --- Reviews carousel end --- */
+
+/* --- Latest news start --- */
 .latest-news .title .link-title {
 	float: right;
 	font-size: 11px;
@@ -459,17 +627,45 @@ margin-top: 100px;
 .latest-news-item p {
 	margin: 23px 0;
 }
-/* ----- Latest news end ----- */
+/* --- Latest news end --- */
 
-/* ----- Subscribe ----- */
+/* --- Subscribe start --- */
 .subscribe form .form-control {
 	max-width: 290px;
 }
 .subscribe .form-info {
 	margin-top: 17px;
 }
-/* ----- Subscribe end ----- */
+/* --- Subscribe end --- */
 
-/* ==== Custom styles end ===== */
+/* --- Contacts start --- */
+.contact-items-wrappet {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.contact-item .contact-item-content {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 15px;
+}
+.contact-item-content {
+	line-height: 1.6;
+}
+.contact-item .contact-item-content span {
+	display: block;
+}
+.contact-item-content .contact-title {
+	font-size: 12px;
+	font-weight: 400;
+	font-family: 'Dosis';
+	text-transform: uppercase;
+	letter-spacing: .3em;
+}
+.contact-item-content .contact-data{
+	color: #444;
+}
+/* --- Contacts end --- */
+
+/* ===== Custom styles end ===== */
 
 
