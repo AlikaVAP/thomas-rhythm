@@ -34,11 +34,11 @@
 				<!-- / logo -->
 				<div class="header-nav">
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Works</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="#" data-scroll=".inner">Home</a></li>
+						<li><a href="#" data-scroll=".about-studio">About</a></li>
+						<li><a href="#" data-scroll=".services">Services</a></li>
+						<li><a href="#" data-scroll=".portfolio">Works</a></li>
+						<li><a href="#" data-scroll=".contacts">Contact</a></li>
 					</ul>
 				</div>
 				<!-- / header-nav -->
@@ -53,6 +53,12 @@
 					<span>Extraordinary art director & creative minimalism lover</span>
 				</div>
 				<!-- / inner-content -->
+				<div class="arrow-down" data-scroll=".about-studio">
+					<div class="rhomb-icon white-icon">
+						<i class="fa fa-chevron-down"></i>
+					</div>
+				</div>
+				<!-- / arrow-down -->
 			</div>
 			<!-- / INNER -->
 			<div class="about-studio default-section">
@@ -90,7 +96,45 @@
 								<div class="team-item">
 									<div class="team-item-img">
 										<img src="img/team-item-thomas.jpg" alt="">
-										<div class="team-item-skills"></div>
+										<div class="team-item-skills">
+											<div class="skill-item-title">
+												<span>Skills</span>
+											</div>
+											<p>Curabitur iaculis accumsan augue, nec finibus mauris pretium eu. Duis placerat ex gravida nibh tristique porta.</p>
+											<div class="skill-item">
+												<span class="skill-name">Branding</span>
+												<div class="progress-wrapp">
+													<div class="progress branding"></div>
+												</div>
+												<!-- / progress-wrapp  -->
+											</div>
+											<!-- / skill-item -->
+											<div class="skill-item">
+												<span class="skill-name">Design</span>
+												<div class="progress-wrapp">
+													<div class="progress design"></div>
+												</div>
+												<!-- / progress-wrapp  -->
+											</div>
+											<!-- / skill-item -->
+											<div class="skill-item">
+												<span class="skill-name">Development</span>
+												<div class="progress-wrapp">
+													<div class="progress development"></div>
+												</div>
+												<!-- / progress-wrapp  -->
+											</div>
+											<!-- / skill-item -->
+											<div class="skill-item">
+												<span class="skill-name">Photography</span>
+												<div class="progress-wrapp">
+													<div class="progress photography"></div>
+												</div>
+												<!-- / progress-wrapp  -->
+											</div>
+											<!-- / skill-item -->
+										</div>
+										<!-- / team-item-skills -->
 									</div>
 									<!-- / team-item-img -->
 									<div class="team-item-info text-center">
@@ -106,6 +150,7 @@
 								<div class="team-item">
 									<div class="team-item-img">
 										<img src="img/team-item-marta.jpg" alt="">
+										<div class="team-item-skills"></div>
 									</div>
 									<!-- / team-item-img -->
 									<div class="team-item-info text-center">
@@ -121,6 +166,7 @@
 								<div class="team-item">
 									<div class="team-item-img">
 										<img src="img/team-item-steve.jpg" alt="">
+										<div class="team-item-skills"></div>
 									</div>
 									<!-- / team-item-img -->
 									<div class="team-item-info  text-center">
@@ -734,7 +780,7 @@
 					<!-- / title -->
 					<div class="row">
 						<div class="col col-8 m-auto">
-							<div class="contact-items-wrappet">
+							<div class="contact-items-wrapper">
 								<div class="row">
 									<div class="col col-4">
 										<div class="contact-item">
@@ -786,7 +832,20 @@
 							</div>
 							<!-- / contact-items-wrappet -->
 							<form class="contact-form">
-
+								<div class="form-col">
+									<input type="text" name="user-name" id="user-name" class="form-control" placeholder="Name">
+									<input type="text" name="user-email" id="user-email" class="form-control" placeholder="Email">
+								</div>
+								<!-- / form-col -->
+								<div class="form-col">
+									<textarea name="user-message" id="user-message" class="form-control" placeholder="Message"></textarea>
+								</div>
+								<!-- / form-col -->
+								<div class="form-info pull-left">
+									<span><i class="fa fa-info-circle"></i> All the fields are required</span>
+								</div>
+								<!-- / form-info -->
+								<button type="submit" class="btn btn-black pull-right">Submit message</button>
 							</form>
 							<!-- / contact-form -->
 						</div>
@@ -797,37 +856,48 @@
 				<!-- / container -->
 			</div>
 			<!-- / CONTACTS -->
+			<div class="map-container">
+				<div id="map"></div>
+				<div class="on-map-block text-center">
+					<div class="map-content">
+						<div class="rhomb-icon white-icon">
+							<i class="fa fa-map-marker"></i>
+						</div>
+						<p>Open the map <i class="fa fa-chevron-down"></i></p>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!-- / MAIN -->
-		<div class="footer">
+		<div class="footer bg-grey">
 			<div class="container text-center">
 				<div class="footer-logo">
 					<img src="img/footer-logo.png" alt="">
 				</div>
 				<!-- / footer-logo -->
 				<ul class="footer-socnet-icon">
-					<li class="rhomb-icon transparent-icon">
-						<a href="#">
+					<li>
+						<a class="rhomb-icon transparent-icon" href="#">
 							<i class="fa fa-facebook"></i>
 						</a>
 					</li>
-					<li class="rhomb-icon transparent-icon">
-						<a href="#">
+					<li>
+						<a class="rhomb-icon transparent-icon" href="#">
 							<i class="fa fa-twitter"></i>
 						</a>
 					</li>
-					<li class="rhomb-icon transparent-icon">
-						<a href="#">
+					<li>
+						<a class="rhomb-icon transparent-icon" href="#">
 							<i class="fa fa-behance"></i>
 						</a>
 					</li>
-					<li class="rhomb-icon transparent-icon">
-						<a href="#">
+					<li>
+						<a class="rhomb-icon transparent-icon" href="#">
 							<i class="fa fa-linkedin"></i>
 						</a>
 					</li>
-					<li class="rhomb-icon transparent-icon">
-						<a href="#">
+					<li>
+						<a class="rhomb-icon transparent-icon" href="#">
 							<i class="fa fa-pinterest"></i>
 						</a>
 					</li>
@@ -842,12 +912,24 @@
 			<!-- / container -->
 		</div>
 		<!-- / FOOTER -->
+		<div class="arrow-up" data-scroll=".inner">
+			<i class="fa fa-caret-up"></i>
+		</div>
+
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<!-- jQuery UI -->
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<!-- Goole map API -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeCBkyg8AXUxgm6MqOQoLrhXa2GxfoNL8&callback=initMap" async defer></script>
+		<!-- Init Goole map -->
+		<script src="js/google-maps.js"></script>
 		<!-- Plugins -->
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+		<!-- Show header on scroll -->
+		<script src="js/header-scroll.js"></script>
+		<!-- Scroll to -->
+		<script src="js/scroll-to.js"></script>
 		<!-- Init plugins -->
 		<script src="js/init.js"></script>
 	</body>

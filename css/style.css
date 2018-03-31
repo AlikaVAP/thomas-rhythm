@@ -72,6 +72,12 @@ blockquote {
 	margin-left: auto;
 	margin-right: auto;
 }
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
 /* ===== Default classes end ===== */
 /* ===== Default component start ===== */
 .default-section {
@@ -249,15 +255,21 @@ textarea.form-control {
 	color: #fff;
 	background-color: #111;
 }
+.rhomb-icon.white-icon {
+	color: #111;
+	background-color: #fff;
+}
 .rhomb-icon.transparent-icon {
 	color: #111;
 	background-color: transparent;
 	border: 2px solid #111;
+	font-size: 15px;
+	line-height: 17px;
 }
 /* --- Rhomb icon end --- */
 /* --- Header start --- */
 .header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	width: 100%;
 	padding: 25px 0;
@@ -293,7 +305,7 @@ textarea.form-control {
 	margin-top: 24px;
 }
 .footer-socnet-icon li {
-	line-height: 17px;
+	display: inline-block;
 }
 .footer-socnet-icon li + li {
 	margin-left: 13px;
@@ -318,7 +330,14 @@ textarea.form-control {
 	margin-top: 15px;
 }
 /* --- Footer end --- */
-
+.arrow-up {
+	font-size: 50px;
+	color: #c6c6c6;
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	cursor: pointer;
+}
 /* ===== Default component end ===== */
 
 /* ===== Guide styles start ===== */
@@ -334,6 +353,7 @@ textarea.form-control {
 	height: 100vh;
 	text-align: center;
 	padding-top: 71px;
+	position: relative;
 }
 .inner::before {
 	content: '';
@@ -360,6 +380,17 @@ textarea.form-control {
 	font-size: 19px;
 	color: rgba(254, 254, 254, .68);
 }
+.arrow-down {
+	position: absolute;
+	bottom: 35px;
+	width: 100%;
+}
+.arrow-down .fa {
+	font-size: 11px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
 /* --- Inner end --- */
 
 /* --- About studio start --- */
@@ -367,7 +398,7 @@ textarea.form-control {
 	border-bottom: 1px solid #ececec;
 }
 .team-wrapper {
-margin-top: 100px;
+	margin-top: 100px;
 }
 .team-item .team-item-img {
 	position: relative;
@@ -380,9 +411,71 @@ margin-top: 100px;
 	height: 100%;
 	background-color: #000;
 	transition: all .2s linear;
+	padding: 30px;
 }
 .team-item .team-item-img:hover .team-item-skills {
 	opacity: 1;
+}
+.team-item-skills .skill-item-title {
+	font-family: 'Dosis';
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: .3em;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 28px;
+}
+.team-item-skills p {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.61;
+	color: rgba(255, 255, 255, .5);
+	margin-bottom: 40px;
+}
+.skill-item .skill-name {
+	font-size: 11px;
+	font-weight: 400;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, .9);
+	display: block;
+	margin-bottom: 7px;
+}
+.skill-item .progress-wrapp {
+	width: 100%;
+	height: 12px;
+	background-color: rgba(255, 255, 255, .15);
+	margin-bottom: 20px;
+}
+.progress-wrapp .progress {
+	background-color: rgba(255, 255, 255, .75);
+	height: 12px;
+	width: 0%;
+	transition: width .5s ease-out;
+}
+.progress-wrapp .progress.branding {
+	transition: width .5s ease-out;
+}
+.progress-wrapp .progress.design {
+	transition: width .5s ease-out .2s;
+}
+.progress-wrapp .progress.development {
+	transition: width .5s ease-out .4s;
+}
+.progress-wrapp .progress.photography {
+	transition: width .5s ease-out .6s;
+}
+.team-item .team-item-img:hover .branding {
+	width: 80%;
+}
+.team-item .team-item-img:hover .design {
+	width: 85%;
+}
+.team-item .team-item-img:hover .development {
+	width: 75%;
+}
+.team-item .team-item-img:hover .photography {
+	width: 70%;
 }
 .team-item .team-item-info {
 	margin-top: 30px;
@@ -396,10 +489,12 @@ margin-top: 100px;
 }
 .team-item-info .team-item-name {
 	font-size: 15px;
-	margin-bottom: 15px;
 }
 .team-item-info .team-item-role {
 	font-size: 12px;
+}
+.team-item-info span + span {
+	margin-top: 15px;
 }
 /* --- About studio end --- */
 
@@ -458,6 +553,7 @@ margin-top: 100px;
 }
 #tabs-portfolio .tabs-nav-portfolio li {
 	display: inline-block;
+	font-size: 13px;
 	color: rgba(17, 17, 17, .50);
 }
 #tabs-portfolio .tabs-nav-portfolio li + li {
@@ -639,16 +735,13 @@ margin-top: 100px;
 /* --- Subscribe end --- */
 
 /* --- Contacts start --- */
-.contact-items-wrappet {
-	margin-left: -15px;
-	margin-right: -15px;
+.contact-items-wrapper {
+	margin-bottom: 80px;
 }
 .contact-item .contact-item-content {
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 15px;
-}
-.contact-item-content {
 	line-height: 1.6;
 }
 .contact-item .contact-item-content span {
@@ -664,7 +757,70 @@ margin-top: 100px;
 .contact-item-content .contact-data{
 	color: #444;
 }
+.contact-form {
+	margin: 0 -5px;
+	overflow: hidden;
+}
+.contact-form .form-col {
+	float: left;
+	width: 50%;
+	padding: 0 5px;
+}
+.contact-form .form-control + .form-control {
+	margin-top: 10px;
+}
+.contact-form .form-info {
+	line-height: 36px;
+	margin-top: 20px;
+	margin-left: 5px;
+}
+.contact-form .btn.btn-black {
+	margin-top: 20px;
+	margin-right: 5px;
+}
 /* --- Contacts end --- */
+/* --- Map start --- */
+#map {
+	height: 410px;
+}
+.map-container {
+	position: relative;
+}
+.on-map-block {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, .9);
+}
+.map-container:hover .on-map-block {
+	display: none;
+}
+.on-map-block::before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+.map-content {
+	display: inline-block;
+	vertical-align: middle;
+}
+.map-content p {
+	font-size: 16px;
+	font-family: 'Dosis';
+	font-weight: 400;
+	letter-spacing: .3em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, .75);
+	margin-top: 27px;
+}
+.map-content p .fa {
+	font-size: 10px;
+}
+/* --- Map end --- */
 
 /* ===== Custom styles end ===== */
 
