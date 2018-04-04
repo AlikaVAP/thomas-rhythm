@@ -21,8 +21,8 @@ function initMap() {
         let myLatlng = new google.maps.LatLng(49.982521, 36.246361);
 
         // Add your company name and some text about company
-        let maptooltipbold = 'EasyCode';
-        let maptooltip = 'IT курсы';
+        let maptooltipbold = 'Thomas Rhythm';
+        let maptooltip = 'Design studio';
 
 
         //---------------------------------------------------------//
@@ -64,7 +64,7 @@ function initMap() {
         let map = new google.maps.Map(mapElement, mapOptions);
 
         // Image of toogle
-        let image = 'img/contacts-map-marker.png';
+        let image = 'img/mapmarker.png';
 
         // Div's of toogle
         let content = document.createElement('div');
