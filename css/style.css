@@ -326,9 +326,10 @@ textarea.form-control {
 .rhomb-icon.transparent-icon {
 	color: #111;
 	background-color: transparent;
-	border: 2px solid #111;
-	font-size: 15px;
-	line-height: 17px;
+	border: 1px solid #111;
+	font-size: 13px;
+	line-height: 21px;
+	border-radius: 3px;
 }
 /* --- Rhomb icon end --- */
 /* --- Header start --- */
@@ -431,6 +432,7 @@ textarea.form-control {
 	right: 30px;
 	bottom: 30px;
 	cursor: pointer;
+	z-index: 98;
 }
 /* --- Arrows end --- */
 /* ===== Default component end ===== */
